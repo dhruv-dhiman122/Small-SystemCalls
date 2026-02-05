@@ -17,12 +17,12 @@ void Mount() {
   const char* device = "/dev/sdb1";
   
   //creating the mounting point
-  if(mount(mountPoint, 0700) == 0) {
+  if(mkdir(mountPoint, 0700) == 0) {
     printf("Mounting point is created without prooblem\n");
   }
   else {
     printf("Failed to create the mounting point\n");
-    exit("EXT_FAILURE");
+    exit(EXT_FAILURE);
   }
 
   //mounting the USB to the point

@@ -37,6 +37,6 @@ void Mount() {
 
 int main() {
   
-
+  Mount();
   exit(EXT_SUCCESS);
 }

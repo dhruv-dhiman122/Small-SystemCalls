@@ -13,7 +13,7 @@
 #define EXT_FAILURE 1
 
 void Mount() {
-  const char* mountPoint = "/mnt/usb-sandisk";
+  const char* mountPoint = "/mnt/usb_sandisk";
   const char* device = "/dev/sdb1";
   
   //creating the mounting point
@@ -22,11 +22,10 @@ void Mount() {
   }
   else {
     printf("Failed to create the mounting point\n");
-    exit(EXT_FAILURE);
   }
 
   //mounting the USB to the point
-  if(mount(mountPoint, device, NULL, MS_BIND, NULL) == 0) {
+  if(mount(mountPoint, device, "btrfs", MS_BIND, NULL) == 0) {
     printf("Created a bind mount point\n");
   }
   else {

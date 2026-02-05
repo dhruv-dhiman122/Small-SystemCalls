@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/mount.h>
+#include <fcntl.h>
+#include <sys/stat.h>
 
 #define EXT_SUCCESS 0
 #define EXT_FAILURE 1
